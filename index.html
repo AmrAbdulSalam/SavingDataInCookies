@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>FirstPage</title>
+</head>
+<body onload="firstPageOpen()">
+    <div class="firstpageform">
+        <form action="#">
+            <table>
+                <tr>
+                    <td>Red</td>
+                    <td><input type="radio" name="colors" id="red" checked></td>
+                    <td>
+                        <div class = 'red'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Blue
+                    </td>
+                    <td>
+                        <input type="radio" name="colors" id="blue">
+                    </td>
+                    <td>
+                        <div class = 'blue'></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Green
+                    </td>
+                    <td>
+                        <input type="radio" name="colors" id="green">
+                    </td>
+                    <td>
+                        <div class = 'green'></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Black
+                    </td>
+                    <td>
+                        <input type="radio" name="colors" id="black">
+                    </td>
+                    <td>
+                        <div class = 'black'></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Gray
+                    </td>
+                    <td>
+                        <input type="radio" name="colors" id="gray">
+                    </td>
+                    <td>
+                        <div class = 'gray'></div>
+                    </td>
+                </tr>
+               <tr>
+                   <td colspan="3">
+                        <button onclick="saveToCookie()" id = 'submitbut'>
+                            Save 
+                        </button>
+                   </td>
+               </tr>
+            </table>
+        </form>
+    </div>
+   
+</body>
+<script src="./scripit.js"></script>
+</html>
