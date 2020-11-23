@@ -1,23 +1,23 @@
 
-let saveToCookie = () => {
+let saveToLocal = () => {
     //start saving to the cookie
     let arr = ['red' , 'green' , 'blue' , 'black' ,'gray']
-    let checked = 0;
+    let checked = '';
     for(let i = 0 ; i < arr.length ; i++){
         if(document.getElementById(arr[i]).checked){
             checked = arr[i];
         }
     }
     
-    document.cookie = "FavColor="+checked 
+    localStorage.setItem('FavColor' , checked)
     firstPageOpen();
 }
 
 let firstPageOpen = () => {
     //when first page is reload
-    let x =getCookie() ;//getiing the faccolor content
-
-    if(x === undefined || x=== 'undefined'){
+    let x = localStorage.getItem('FavColor') ;//getiing the faccolor content
+    console.log(x)
+    if(x === null || x=== 'null'){
         document.querySelector('.firstpageform').style.visibility = 'visible'
         document.getElementById('removeBut').style.visibility = 'hidden'
         
@@ -31,22 +31,10 @@ let firstPageOpen = () => {
 }
 
 
-function getCookie(){
-    let name = 'FavColor'+"=";
-    let coo = document.cookie;
-    let cookies = coo.split(';')
-    for(let i = 0 ; i < cookies.length ;i++){
-        let c = cookies[i];
-        if(c.indexOf(name) ==0){
-            return c.substring(name.length , c.length)
-        }
-    }
-}
 
-
-let removeCookie = () => { 
-    console.log('ffgd')
-    document.cookie = "FavColor="+undefined
+let removeFromLocal = () => { 
+    
+    localStorage.setItem('FavColor' , null)
     document.body.style.background = 'white';
     firstPageOpen()
     

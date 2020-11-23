@@ -43,3 +43,9 @@ td{
     height: 20px;
 }
 
+#removeBut{
+    border-radius: 20px;
+    width: 250px;
+    cursor: pointer;
+    outline: none;
+}
